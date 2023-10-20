@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/4dave/goapi/controllers"
 	"github.com/4dave/goapi/initializers"
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -13,6 +14,7 @@ func init() {
 
 func main() {
 	r := gin.Default()
+	r.Use(cors.Default())
 	r.POST("/contact", controllers.ContactCreate)
 	r.GET("/contacts", controllers.ContactList)
 	r.GET("/contact/:id", controllers.ContactShow)
