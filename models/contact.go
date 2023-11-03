@@ -9,6 +9,10 @@ type Contact struct {
 	Address   string
 	Email     string
 	Phone     string
+	City      string
+	State     string
+	Zip       string
+	Map       string
 }
 
 type ContactBody struct {
@@ -17,4 +21,7 @@ type ContactBody struct {
 	Address   string
 	Email     string
 	Phone     string
+	City      string
+	State     string
+	Zip       string
 }
